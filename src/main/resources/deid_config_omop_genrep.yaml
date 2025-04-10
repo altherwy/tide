@@ -1,5 +1,4 @@
 name: custom_deid_for_labeled_dataset
-
 deidJobs:
   - jobName: custom_labels_job
     version: v1.0
