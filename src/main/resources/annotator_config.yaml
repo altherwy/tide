@@ -1,4 +1,3 @@
-
 annotatorSpecs:
   - type: zip_code
     annotatorLabel: ZIP_CODE
