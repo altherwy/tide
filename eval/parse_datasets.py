@@ -1,3 +1,4 @@
+#%%
 import csv
 import json
 
@@ -47,3 +48,5 @@ def convert_to_tide_format(csv_path, output_path):
 
 # Example usage:
 convert_to_tide_format('conll_dataset_testset_with_new_format.csv', 'conll_converted_dataset.jsonl')
+
+# %%
