@@ -101,6 +101,22 @@ def get_total_gt_labels(ground_truth):
 
     return total_labels
 
+def get_total_gt_labels_by_label(ground_truth, label):
+    total_labels = 0
+    for idx, gt in enumerate(ground_truth):
+        print(idx)
+        try:
+            for g_label in gt['label']:
+                # check if the label is in the ground truth
+                if len(g_label) == 3 and g_label[2] == label:
+                    total_labels += 1
+                
+        except IndexError as e:
+            print(f"Error in file {idx}: {e}")
+            continue
+
+    return total_labels
+
 def calculate_metrics(true_positives, false_positives, false_negatives):
     """
     Calculate precision, recall, and F1-score given TP, FP, and FN.
