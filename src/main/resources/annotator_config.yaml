@@ -1,27 +1,95 @@
+#name: note_deid_20190812
 annotatorSpecs:
-  - type: zip_code
-    annotatorLabel: ZIP_CODE
+  - type: general-accession
+    annotatorLabel: ACCESSION
 
-  - type: phone_number
-    annotatorLabel: PHONE_NUMBER
+  - type: accession_num
+    annotatorLabel: ACCESSION
 
-  - type: person
-    annotatorLabel: PERSON
+  - type: patient_mrn
+    annotatorLabel: MRN
 
-  - type: nrp
-    annotatorLabel: NRP
+  - type: mrn
+    annotatorLabel: MRN
 
-  - type: medical_id
-    annotatorLabel: Medical_ID
+  - type: general_name
+    annotatorLabel: NAME
+
+  - type: patient_name
+    annotatorLabel: NAME
+
+  - type: other_name
+    annotatorLabel: NAME
+
+  - type: care_provider_name
+    annotatorLabel: NAME
+
+  - type: emergency_contact
+    annotatorLabel: NAME
+
+  - type: ner-PERSON
+    annotatorLabel: NAME
+
+  - type: ner-LOCATION
+    annotatorLabel: LOCATION
 
   - type: location
     annotatorLabel: LOCATION
 
-  - type: email_address
-    annotatorLabel: EMAIL_ADDRESS
+  - type: other_address
+    annotatorLabel: LOCATION
 
-  - type: date
+  - type: patient_address
+    annotatorLabel: LOCATION
+
+  - type: emergency_contact_address
+    annotatorLabel: LOCATION
+
+  - type: patient_phone
+    annotatorLabel: PHONE
+
+  - type: emergency_contact_phone
+    annotatorLabel: PHONE
+
+  - type: general-phone
+    annotatorLabel: PHONE
+
+  - type: phi_date
     annotatorLabel: DATE
 
-  - type: mention
-    annotatorLabel: MENTION
+  - type: general-account
+    annotatorLabel: OTHER_INDIRECT
+
+  - type: other_id
+    annotatorLabel: OTHER_INDIRECT
+
+  - type: general
+    annotatorLabel: OTHER_INDIRECT
+
+  - type: general_number
+    annotatorLabel: OTHER_INDIRECT
+
+  - type: patient_ssn
+    annotatorLabel: SSN
+
+  - type: patient_email
+    annotatorLabel: EMAIL/URL
+
+  - type: other_email
+    annotatorLabel: EMAIL/URL
+
+  - type: public_id
+    annotatorLabel: OTHER_DIRECT
+
+  - type: family_id
+    annotatorLabel: OTHER_DIRECT
+
+  - type: general-email
+    annotatorLabel: EMAIL/URL
+
+  - type: general-ssn
+    annotatorLabel: SSN
+
+  - type: general-ip
+    annotatorLabel: PRIYA
+

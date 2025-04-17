@@ -1,0 +1,27 @@
+annotatorSpecs:
+  - type: zip_code
+    annotatorLabel: ZIP_CODE
+
+  - type: phone_number
+    annotatorLabel: PHONE_NUMBER
+
+  - type: person
+    annotatorLabel: PERSON
+
+  - type: nrp
+    annotatorLabel: NRP
+
+  - type: medical_id
+    annotatorLabel: Medical_ID
+
+  - type: location
+    annotatorLabel: LOCATION
+
+  - type: email_address
+    annotatorLabel: EMAIL_ADDRESS
+
+  - type: date
+    annotatorLabel: DATE
+
+  - type: mention
+    annotatorLabel: MENTION
