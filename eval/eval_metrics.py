@@ -50,7 +50,58 @@ def calculate_tp(prediction_folder, ground_truth_file):
         log_file.writelines(log_entries)
     
     return pred_files, ground_truth, tp
+
+
+def calculate_tp_by_label(prediction_folder, ground_truth_file, label):
+    # Load ground truth lines
+    with open(ground_truth_file, 'r', encoding='utf-8') as f:
+        ground_truth = [json.loads(line) for line in f]
+
+    # Sort prediction files by index (e.g., note_1.txt.json -> 1)
+    pred_files = sorted(
+        [f for f in os.listdir(prediction_folder) if f.startswith("note_") and f.endswith(".txt.json")],
+        key=lambda x: int(x.split('_')[1].split('.')[0])
+    )
+    tp = 0
+    log_entries = []
+    for idx, pred_file in enumerate(pred_files):
+        pred_path = os.path.join(prediction_folder, pred_file)
+        with open(pred_path, 'r', encoding='utf-8') as f:
+            try:
+                pred = json.load(f)
+            except json.JSONDecodeError:
+                print(f"Error decoding JSON in {pred_file}")
+                continue
     
+        try:
+            for p_label in pred.get('label', []):
+                # check if the label is in the ground truth
+                if idx < len(ground_truth) and 'label' in ground_truth[idx]:
+                    for gt_label in ground_truth[idx]['label']:
+                        if p_label[0] == gt_label[0] and p_label[1] == gt_label[1] and p_label[2] == label:
+                            # Add match log entry
+                            log_entries.append(f"Match found: {p_label} in {pred_file} matches {gt_label} in ground truth\n")
+                            tp += 1
+                            break
+                    else:
+                        # Add no-match log entry
+                        log_entries.append(f"No match found for {p_label} in {pred_file}\n")
+                else:
+                    log_entries.append(f"Warning: No ground truth labels available for {pred_file}\n")
+        except Exception as e:
+            log_entries.append(f"Error processing {pred_file}: {str(e)}\n")
+            print(f"Error processing {pred_file}: {str(e)}")
+
+        print(f"Processed {pred_file}, total correct: {tp}")
+        # Add processing status log entry
+        log_entries.append(f"Processed {pred_file}, total correct so far: {tp}\n")
+
+    # Write all log entries to file at once
+    with open("match_log.txt", "a") as log_file:
+        log_file.writelines(log_entries)
+    
+    return pred_files, ground_truth, tp
+
 # get the total number of labels in the prediction files
 def get_total_pred_labels(folder, files):
     total_labels = 0
@@ -104,7 +155,6 @@ def get_total_gt_labels(ground_truth):
 def get_total_gt_labels_by_label(ground_truth, label):
     total_labels = 0
     for idx, gt in enumerate(ground_truth):
-        print(idx)
         try:
             for g_label in gt['label']:
                 # check if the label is in the ground truth
