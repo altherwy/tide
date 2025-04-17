@@ -67,6 +67,27 @@ def get_total_pred_labels(folder, files):
             continue    
     return total_labels
 
+# get the total number of labels in the prediction files
+def get_total_pred_labels_by_label(folder, files, label):
+    total_labels = 0
+    for file in files:
+        pred_path = os.path.join(folder, file)
+        with open(pred_path, 'r', encoding='utf-8') as f:
+            pred = json.load(f)
+        try:
+            for p_label in pred['label']:
+                # check if the label is in the ground truth
+                if len(p_label) == 3 and p_label[2] == label:
+                    total_labels += 1
+                print(f"File: {file}, Total labels: {total_labels}")
+        except IndexError as e:
+            print(f"Error in file {file}: {e}")
+            continue    
+    return total_labels
+
+
+
+
 def get_total_gt_labels(ground_truth):
     total_labels = 0
     for idx, gt in enumerate(ground_truth):
@@ -108,7 +129,7 @@ def calculate_metrics(true_positives, false_positives, false_negatives):
     }
 
 # Main function for evaluation
-def main():
+def main(labels):
     prediction_folder = "../output/1744348281291/annotator"  # Replace with the folder containing note_*.txt.json files
     ground_truth_file = "conll_converted_dataset.jsonl"  # Replace with actual path
     
@@ -141,4 +162,5 @@ def main():
 
 # Execute if script is run directly
 if __name__ == "__main__":
+    conll_labels = ['NAME','LOCATION']
     main()
