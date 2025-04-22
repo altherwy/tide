@@ -195,7 +195,7 @@ def calculate_metrics(true_positives, false_positives, false_negatives):
     }
 
 # Main function for evaluation
-def main(labels):
+def main(labels = None):
     prediction_folder = "../output/1744348281291/annotator"  # Replace with the folder containing note_*.txt.json files
     ground_truth_file = "conll_converted_dataset.jsonl"  # Replace with actual path
     
@@ -228,5 +228,10 @@ def main(labels):
 
 # Execute if script is run directly
 if __name__ == "__main__":
-    conll_labels = ['NAME','LOCATION']
+    # Run convert_to_tide "to get the ground truth in tide format"
+    # generate .txt files for each line in the ground truth file (we don't have the code)
+    # Run tide to generate the annotation files
+    # Combine the annotation files into one csv file
+    # Filter out extar "NAME" labels
+    #conll_labels = ['NAME','LOCATION']
     main()

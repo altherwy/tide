@@ -46,7 +46,8 @@ def convert_to_tide_format(csv_path, output_path):
         for entry in tide_formatted:
             out_f.write(json.dumps(entry) + '\n')
 
-# Example usage:
-convert_to_tide_format('conll_dataset_testset_with_new_format.csv', 'conll_converted_dataset.jsonl')
+if __name__ == "__main__":
+    # Example usage
+    convert_to_tide_format('original_conll_dataset.csv', 'conll_ground_truth.jsonl')
 
 # %%
