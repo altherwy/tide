@@ -44,5 +44,5 @@ def extract_annotations_to_jsonl(annotation_files_path, output_path):
 if __name__ == "__main__":
     # Example usage
     annotation_files_path = '../../output/1744347802881 copy/annotator'
-    output_path = '../data/1744347802881.jsonl'
+    output_path = '../data/conll_predictions.jsonl'
     extract_annotations_to_jsonl(annotation_files_path, output_path)
