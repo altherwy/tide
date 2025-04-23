@@ -1,4 +1,3 @@
-#%%
 import json
 import os
 
@@ -16,43 +15,35 @@ def fix_json_file(input_json, output_json):
         for line in infile:
             raw = line.strip()
             try:
-                # Try parsing the line directly
-                json.loads(raw)
-                outfile.write(raw + "\n")
-            except json.JSONDecodeError:
-                # Attempt to fix malformed quotes inside the text field
-                try:
-                    # Split up to "label": assuming typical structure
-                    prefix, suffix = raw.split(',"label":', 1)
+                # Split up to "label": assuming typical structure
+                prefix, suffix = raw.split(',"label":', 1)
 
-                    if prefix.startswith('{"text":"'):
-                        text = prefix[len('{"text":"'):]
-                        if text.endswith('"'):
-                            text = text[:-1]  # Remove trailing quote before re-escaping
+                if prefix.startswith('{"text":"'):
+                    text = prefix[len('{"text":"'):]
+                    if text.endswith('"'):
+                        text = text[:-1]  # Remove trailing quote before re-escaping
 
-                        # Escape internal double quotes
-                        text_fixed = text.replace('"', '\\"')
+                    # Escape internal double quotes
+                    text_fixed = text.replace('"', '\\"')
 
-                        # Rebuild fixed line
-                        fixed_line = f'{{"text":"{text_fixed}","label":{suffix}'
-                        
-                        # Validate again
-                        data = json.loads(fixed_line)
-                        outfile.write(fixed_line + "\n")
-                    else:
-                        print(f"⚠️ Unexpected format, skipping: {raw[:60]}...")
-                except Exception as e:
-                    print(f"❌ Could not fix line: {raw[:60]}...\nError: {e}")
-                    return None
+                    # Rebuild fixed line
+                    fixed_line = f'{{"text":"{text_fixed}","label":{suffix}'
+                    
+                    # Validate again
+                    json.loads(fixed_line)
+                    outfile.write(fixed_line + "\n")
+                else:
+                    print(f"⚠️ Unexpected format, skipping: {raw[:60]}...")
+            except Exception as e:
+                print(f"❌ Could not fix line: {raw[:60]}...\nError: {e}")
     os.replace(output_json, input_json)
-    print(f"✅ Fixed file saved to: {output_json}")
-    return data
+    print(f"✅ Fixed file saved to: {input_json}")
 
 
 if __name__ == "__main__":
     # Example usage
     # ✅ Replace these with your actual paths
-    input_jsonl = "../../output/1744347802881/annotator/note_1014.txt.json"
-    output_jsonl = "../data/note_1014_fixed.txt.json"
+    input_jsonl = "../../output/1744347802881 copy/annotator/note_1014.txt.json"
+    output_jsonl = "../../output/1744347802881 copy/annotator/note_1014_fixed.txt.json"
 
     fix_json_file(input_jsonl, output_jsonl)
