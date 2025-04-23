@@ -69,6 +69,8 @@ public class DeidTransform
   public static final TupleTag<String> statsPhiTypeTag = new TupleTag<String>() {};
   public static final TupleTag<String> statPhiFoundByTag = new TupleTag<String>() {};
 
+  public static int totalItems = 0;
+
   private static final int MINIMUM_WORD_LENGTH = 3;
 
   private static final String wordIgnoreFile = "wordIgnore.txt";
@@ -218,6 +220,8 @@ public class DeidTransform
     @ProcessElement
     public void processElement(ProcessContext context)
         throws SQLException, IOException, IllegalAccessException {
+
+        
 
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
@@ -567,6 +571,8 @@ public class DeidTransform
           trackingMessage += ("StanfordDeid:[" + (trackingTsEnd - trackingTsStart)
               + "ms] found:[" + items.size() + "] ");
           trackingTsStart = trackingTsEnd;
+          totalItems += items.size();
+          
 
           //end of Stanford Deid
 
@@ -606,6 +612,7 @@ public class DeidTransform
       if (deidResult != null) {
         context.output(deidResult);
       }
+      log.info(" Total Items: "+totalItems);
     }
   }
 }

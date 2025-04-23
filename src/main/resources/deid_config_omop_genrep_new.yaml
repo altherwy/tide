@@ -1,0 +1,57 @@
+name: custom_deid_for_labeled_dataset
+deidJobs:
+  - jobName: custom_labels_job
+    version: v1.0
+    textFields: note_text
+    textIdFields: note_id
+    analytic: false
+    dateJitter: local
+    dateJitterRange: 30
+    dateJitterSeedField: id
+    googleDlpEnabled: false
+    annotatorOutputEnabled: true
+    nerEnabled: true
+
+    spec:
+      - itemName: zip_code
+        action: replace_minimumlengthword_with
+        actionParam: 99999 5
+        fields: ZIP_CODE
+
+      - itemName: phone_number
+        action: replace_minimumlengthword_with
+        actionParam: 999-999-9999 7
+        fields: PHONE_NUMBER
+
+      - itemName: person
+        action: surrogate_name
+        actionParamMap: {"format": "F L"}
+        fields: PERSON
+
+      - itemName: nrp
+        action: remove
+        fields: NRP
+
+      - itemName: medical_id
+        action: replace_minimumlengthword_with
+        actionParam: 99999999 3
+        fields: Medical_ID
+
+      - itemName: location
+        action: surrogate_address
+        fields: LOCATION
+
+      - itemName: email_address
+        action: replace_minimumlengthword_with
+        actionParam: deidentified@example.com 3
+        fields: EMAIL_ADDRESS
+
+      - itemName: date
+        action: jitter_date_from_field
+        actionParam: 10/10/2100
+        fields: DATE
+
+      - itemName: mention
+        action: replace_minimumlengthword_with
+        actionParam: "[MENTION] 3"
+        fields: MENTION
