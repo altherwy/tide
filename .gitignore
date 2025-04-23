@@ -5,3 +5,4 @@ target
 local_deid
 stanford-test-project-1-fa1533111732.json
 output/
+.DS_Store
