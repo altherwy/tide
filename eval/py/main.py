@@ -12,7 +12,7 @@ git.split_jsonl_to_txt(output_dataset, output_dir)
 # %%
 import os
 import json
-annotation_files_path = '../../output/1744348281291/annotator'
+annotation_files_path = '../../output/1744347802881/annotator'
 # sort the files by name
 annotation_files = sorted([f for f in os.listdir(annotation_files_path) if f.endswith('.txt.json')])
 # read the first file to get the keys
@@ -21,6 +21,7 @@ labels = []
 ids = []
 for annotation_file in annotation_files:
     with open(os.path.join(annotation_files_path, annotation_file), 'r', encoding='utf-8') as f:
+        print(f"Reading file: {annotation_file}")
         data = json.load(f)
         keys = data.keys()
         texts.append(data.get('text', ''))
