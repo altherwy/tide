@@ -2,14 +2,15 @@
 import csv
 import ast
 from collections import defaultdict
+import json
 
 # Read and group labels by file
 grouped = defaultdict(list)
-with open('total_labels.csv', 'r') as infile:
-    reader = csv.DictReader(infile)
-    for row in reader:
-        file_name = row['file']
-        label = ast.literal_eval(row['labels'])
+with open('total_labels.jsonl', 'r') as infile:
+    for line in infile:
+        data = json.loads(line)
+        file_name = data['file']
+        label = data['labels']  # Assuming labels are already in the right format in JSON
         grouped[file_name].append(label)
 
 #%%
