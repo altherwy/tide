@@ -37,14 +37,16 @@ def fix_json_file(input_json, output_json):
                         fixed_line = f'{{"text":"{text_fixed}","label":{suffix}'
                         
                         # Validate again
-                        json.loads(fixed_line)
+                        data = json.loads(fixed_line)
                         outfile.write(fixed_line + "\n")
                     else:
                         print(f"⚠️ Unexpected format, skipping: {raw[:60]}...")
                 except Exception as e:
                     print(f"❌ Could not fix line: {raw[:60]}...\nError: {e}")
+                    return None
     os.replace(output_json, input_json)
     print(f"✅ Fixed file saved to: {output_json}")
+    return data
 
 
 if __name__ == "__main__":
