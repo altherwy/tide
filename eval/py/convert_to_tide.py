@@ -40,7 +40,7 @@ def convert_to_tide_format(csv_path, output_path):
                 else:
                     i += 1
 
-            tide_formatted.append({"text": text, "labels": spans})
+            tide_formatted.append({"text": text, "label": spans, "id": f"note_{row['id']}.txt"})
 
     with open(output_path, 'w', encoding='utf-8') as out_f:
         for entry in tide_formatted:
