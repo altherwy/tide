@@ -14,4 +14,5 @@ git.split_jsonl_to_txt(output_dataset, output_dir)
 annotation_files_path = '../../output/conll/annotator'
 output_path = '../data/conll_predictions.jsonl'
 ea.extract_annotations_to_jsonl(annotation_files_path, output_path)
+# %% calculate tp
 # %%
