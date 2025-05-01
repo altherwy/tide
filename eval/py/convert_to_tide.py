@@ -21,6 +21,7 @@ def convert_to_tide_format(csv_path, output_path):
 
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
+        row_id = 1
         for row in reader:
             text = row['text']
             labels = row['label'].split('*')
@@ -40,7 +41,8 @@ def convert_to_tide_format(csv_path, output_path):
                 else:
                     i += 1
 
-            tide_formatted.append({"text": text, "label": spans, "id": f"note_{row['id']}.txt"})
+            tide_formatted.append({"text": text, "label": spans, "id": f"note_{row_id}.txt"})
+            row_id += 1
 
     with open(output_path, 'w', encoding='utf-8') as out_f:
         for entry in tide_formatted:
