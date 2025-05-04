@@ -1,6 +1,19 @@
 #%%
 import json
 import pandas as pd
+
+def print_results(metrics):
+    """
+    Print the evaluation metrics in a formatted way.
+    
+    Args:
+        metrics (dict): A dictionary containing precision, recall, and F1-score.
+    """
+    print("\nEvaluation Metrics:")
+    print(f"Precision: {metrics['precision']:.4f}")
+    print(f"Recall: {metrics['recall']:.4f}")
+    print(f"F1 Score: {metrics['f1_score']:.4f}")
+
 def read_jsonl(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         data = [json.loads(line) for line in f]
@@ -17,7 +30,7 @@ def get_total_labels(file_path):
             total_labels += len(labels)
     return total_labels
 
-#%%
+# calculate true positives
 def calc_tp(gt_file_path, pred_file_path):
     
     gt = read_jsonl(gt_file_path)

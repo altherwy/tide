@@ -2,18 +2,6 @@
 import convert_to_tide as ct
 import extract_annotations_to_jsonl as ea
 #%%
-def print_results(metrics):
-    """
-    Print the evaluation metrics in a formatted way.
-    
-    Args:
-        metrics (dict): A dictionary containing precision, recall, and F1-score.
-    """
-    print("\nEvaluation Metrics:")
-    print(f"Precision: {metrics['precision']:.4f}")
-    print(f"Recall: {metrics['recall']:.4f}")
-    print(f"F1 Score: {metrics['f1_score']:.4f}")
-#%%
 original_dataset = '../data/original_conll_dataset.csv'
 output_dataset = '../data/conll_ground_truth.jsonl'
 ct.convert_to_tide_format(original_dataset, output_dataset)
@@ -35,13 +23,23 @@ gt_total_labels = ct.get_total_labels(gt_file_path)
 pred_total_labels = ct.get_total_labels(pred_file_path)
 fn = gt_total_labels - tp
 fp = pred_total_labels - tp
-all_metrics = ct.calculate_metrics(tp, fp, fn)
-print_results(all_metrics)
+all_metrics_masked = ct.calculate_metrics(tp, fp, fn)
+# write the results to a file
+with open("../data/conll_metrics_masked.txt", "w") as f:
+    f.write(f"True positives: {tp}\n")
+    f.write(f"Total labels in ground truth: {gt_total_labels}\n")
+    f.write(f"Total labels in prediction: {pred_total_labels}\n")
+    f.write(f"False negatives: {fn}\n")
+    f.write(f"False positives: {fp}\n")
+    f.write(f"Precision: {all_metrics_masked['precision']:.4f}\n")
+    f.write(f"Recall: {all_metrics_masked['recall']:.4f}\n")
+    f.write(f"F1 Score: {all_metrics_masked['f1_score']:.4f}\n")
+f.close()
 # %% calculate metrics of each label
 import calculate_metrics_by_label as cml
 gt_file_path = '../data/conll_ground_truth.jsonl'
 pred_file_path = '../data/conll_predictions.jsonl'
-labels = ['PERSON']
+labels = ['PERSON','ZIP_CODE','PHONE_NUMBER','NRP','Medical_ID','LOCATION','EMAIL_ADDRESS','DATE','MENTION']
 for label in labels:
     tp = cml.calc_tp(gt_file_path, pred_file_path, label)
     gt_total_labels = cml.get_total_labels(gt_file_path, label)
@@ -54,7 +52,17 @@ for label in labels:
     print(f"Total labels in prediction for {label}: {pred_total_labels}")
     print(f"false negatives for {label}: {fn}")
     print(f"false positives for {label}: {fp}")
-    print_results(all_metrics)
+    # write the results to a file
+    with open(f"../data/conll_metrics_{label}.txt", "w") as f:
+        f.write(f"True positives: {tp}\n")
+        f.write(f"Total labels in ground truth: {gt_total_labels}\n")
+        f.write(f"Total labels in prediction: {pred_total_labels}\n")
+        f.write(f"False negatives: {fn}\n")
+        f.write(f"False positives: {fp}\n")
+        f.write(f"Precision: {all_metrics['precision']:.4f}\n")
+        f.write(f"Recall: {all_metrics['recall']:.4f}\n")
+        f.write(f"F1 Score: {all_metrics['f1_score']:.4f}\n")
+    f.close()
 
 
 # %%
