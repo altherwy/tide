@@ -15,8 +15,16 @@ annotation_files_path = '../../output/conll/annotator'
 output_path = '../data/conll_predictions.jsonl'
 ea.extract_annotations_to_jsonl(annotation_files_path, output_path)
 # %% calculate tp
-import calculate_tp as ct
+import calculate_metrics as ct
 gt_file_path = '../data/conll_ground_truth.jsonl'
 pred_file_path = '../data/conll_predictions.jsonl'
 tp = ct.calc_tp(gt_file_path, pred_file_path)
+gt_total_labels = ct.get_total_labels(gt_file_path)
+pred_total_labels = ct.get_total_labels(pred_file_path)
+print(f"Total true positives: {tp}")
+fn = gt_total_labels - tp
+print(f"Total false negatives: {fn}")
+fp = pred_total_labels - tp
+print(f"Total false positives: {fp}")
+
 # %%

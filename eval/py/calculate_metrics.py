@@ -49,6 +49,32 @@ def calc_tp(gt_file_path, pred_file_path):
         log_file.write("End of log.\n")
     return tp
      
+def calculate_metrics(true_positives, false_positives, false_negatives):
+    """
+    Calculate precision, recall, and F1-score given TP, FP, and FN.
+    
+    Args:
+        true_positives (int): Number of correct positive predictions.
+        false_positives (int): Number of incorrect positive predictions.
+        false_negatives (int): Number of missed ground truth labels.
+    
+    Returns:
+        dict: A dictionary containing precision, recall, and F1-score.
+    """
+    # Calculate precision
+    precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
+    
+    # Calculate recall
+    recall = true_positives / (true_positives + false_negatives) if (true_positives + false_negatives) > 0 else 0
+    
+    # Calculate F1-score
+    f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
+    
+    return {
+        "precision": precision,
+        "recall": recall,
+        "f1_score": f1_score
+    }
 
 # %%
 if __name__ == "__main__":
@@ -56,3 +82,8 @@ if __name__ == "__main__":
     gt_file_path = '../data/conll_ground_truth.jsonl'
     pred_file_path = '../data/conll_predictions.jsonl'
     tp = calc_tp(gt_file_path, pred_file_path)
+    print(f"Total true positives: {tp}")
+    gt_total_labels = get_total_labels(gt_file_path)
+    print(f"Total labels in ground truth: {get_total_labels}")
+    pred_total_labels = get_total_labels(pred_file_path)
+    print(f"Total labels in prediction: {pred_total_labels}")
