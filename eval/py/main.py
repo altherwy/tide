@@ -26,7 +26,7 @@ git.split_jsonl_to_txt(output_dataset, output_dir)
 annotation_files_path = '../../output/conll/annotator'
 output_path = '../data/conll_predictions.jsonl'
 ea.extract_annotations_to_jsonl(annotation_files_path, output_path)
-# %% calculate metrics
+# %% calculate metrics MASKED
 import calculate_metrics as ct
 gt_file_path = '../data/conll_ground_truth.jsonl'
 pred_file_path = '../data/conll_predictions.jsonl'
@@ -37,5 +37,24 @@ fn = gt_total_labels - tp
 fp = pred_total_labels - tp
 all_metrics = ct.calculate_metrics(tp, fp, fn)
 print_results(all_metrics)
-# %%
+# %% calculate metrics of each label
+import calculate_metrics_by_label as cml
+gt_file_path = '../data/conll_ground_truth.jsonl'
+pred_file_path = '../data/conll_predictions.jsonl'
+labels = ['PERSON']
+for label in labels:
+    tp = cml.calc_tp(gt_file_path, pred_file_path, label)
+    gt_total_labels = cml.get_total_labels(gt_file_path, label)
+    pred_total_labels = cml.get_total_labels(pred_file_path, label)
+    fn = gt_total_labels - tp
+    fp = pred_total_labels - tp
+    all_metrics = cml.calculate_metrics(tp, fp, fn)
+    print(f"true positives for {label}: {tp}")
+    print(f"Total labels in ground truth for {label}: {gt_total_labels}")
+    print(f"Total labels in prediction for {label}: {pred_total_labels}")
+    print(f"false negatives for {label}: {fn}")
+    print(f"false positives for {label}: {fp}")
+    print_results(all_metrics)
 
+
+# %%

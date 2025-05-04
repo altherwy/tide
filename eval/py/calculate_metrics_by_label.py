@@ -13,8 +13,11 @@ def get_total_labels(file_path, label):
     total_labels = 0
     for i in range(len(df)):
         labels = df['label'][i]
-        if labels:
-            total_labels += len([l for l in labels if l[2] == label])
+        if labels and len(labels[0]) > 1:
+            try:
+                total_labels += len([l for l in labels if l[2] == label])
+            except Exception as e:
+                print(f"Error processing labels in row {i}: {e}")
     return total_labels
 
 #%%
@@ -35,7 +38,7 @@ def calc_tp(gt_file_path, pred_file_path, label):
                 break
             
             for gt_label in gt_labels:
-                if pred_label[0] == gt_label[0] and pred_label[1] == gt_label[1] and pred_label[2] == label:
+                if pred_label[0] == gt_label[0] and pred_label[1] == gt_label[1] and pred_label[2] == label and gt_label[2] == label:
                     tp += 1
                     log.append(f"True positive found: {pred_label}\n")
                     log.append(f"GT label: {gt_label}\n")
@@ -81,9 +84,12 @@ if __name__ == "__main__":
     # Example usage
     gt_file_path = '../data/conll_ground_truth.jsonl'
     pred_file_path = '../data/conll_predictions.jsonl'
-    tp = calc_tp(gt_file_path, pred_file_path)
+    tp = calc_tp(gt_file_path, pred_file_path, 'PERSON')
     print(f"Total true positives: {tp}")
-    gt_total_labels = get_total_labels(gt_file_path)
-    print(f"Total labels in ground truth: {get_total_labels}")
-    pred_total_labels = get_total_labels(pred_file_path)
+    gt_total_labels = get_total_labels(gt_file_path, 'PERSON')
+    print(f"Total labels in ground truth: {gt_total_labels}")
+    pred_total_labels = get_total_labels(pred_file_path, 'PERSON')
     print(f"Total labels in prediction: {pred_total_labels}")
+
+# %%
+
