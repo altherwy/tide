@@ -36,8 +36,6 @@ pred_total_labels = ct.get_total_labels(pred_file_path)
 fn = gt_total_labels - tp
 fp = pred_total_labels - tp
 all_metrics = ct.calculate_metrics(tp, fp, fn)
-
 print_results(all_metrics)
-
 # %%
 
