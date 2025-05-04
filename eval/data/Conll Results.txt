@@ -1,0 +1,128 @@
+MASKED
+-----------------------------------
+True positives: 1894
+Total labels in ground truth: 3380
+Total labels in prediction: 4403
+False negatives: 1486
+False positives: 2509
+Precision: 0.4302
+Recall: 0.5604
+F1 Score: 0.4867
+
+MENTION
+------------------------------------
+True positives: 0
+Total labels in ground truth: 0
+Total labels in prediction: 0
+False negatives: 0
+False positives: 0
+Precision: 0.0000
+Recall: 0.0000
+F1 Score: 0.0000
+
+DATE
+------------------------------------
+True positives: 0
+Total labels in ground truth: 0
+Total labels in prediction: 326
+False negatives: 0
+False positives: 326
+Precision: 0.0000
+Recall: 0.0000
+F1 Score: 0.0000
+
+EMAIL_ADDRESS
+------------------------------------
+True positives: 0
+Total labels in ground truth: 0
+Total labels in prediction: 0
+False negatives: 0
+False positives: 0
+Precision: 0.0000
+Recall: 0.0000
+F1 Score: 0.0000
+
+LOCATION
+------------------------------------
+True positives: 465
+Total labels in ground truth: 1693
+Total labels in prediction: 585
+False negatives: 1228
+False positives: 120
+Precision: 0.7949
+Recall: 0.2747
+F1 Score: 0.4083
+
+Medical_ID
+------------------------------------
+True positives: 0
+Total labels in ground truth: 0
+Total labels in prediction: 0
+False negatives: 0
+False positives: 0
+Precision: 0.0000
+Recall: 0.0000
+F1 Score: 0.0000
+
+NRP
+------------------------------------
+True positives: 0
+Total labels in ground truth: 0
+Total labels in prediction: 0
+False negatives: 0
+False positives: 0
+Precision: 0.0000
+Recall: 0.0000
+F1 Score: 0.0000
+
+PHONE_NUMBER
+------------------------------------
+True positives: 0
+Total labels in ground truth: 0
+Total labels in prediction: 0
+False negatives: 0
+False positives: 0
+Precision: 0.0000
+Recall: 0.0000
+F1 Score: 0.0000
+
+ZIP_CODE
+------------------------------------
+True positives: 0
+Total labels in ground truth: 0
+Total labels in prediction: 0
+False negatives: 0
+False positives: 0
+Precision: 0.0000
+Recall: 0.0000
+F1 Score: 0.0000
+
+PERSON
+------------------------------------
+True positives: 1429
+Total labels in ground truth: 1687
+Total labels in prediction: 1570
+False negatives: 258
+False positives: 141
+Precision: 0.9102
+Recall: 0.8471
+F1 Score: 0.8775
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -47,11 +47,6 @@ for label in labels:
     fn = gt_total_labels - tp
     fp = pred_total_labels - tp
     all_metrics = cml.calculate_metrics(tp, fp, fn)
-    print(f"true positives for {label}: {tp}")
-    print(f"Total labels in ground truth for {label}: {gt_total_labels}")
-    print(f"Total labels in prediction for {label}: {pred_total_labels}")
-    print(f"false negatives for {label}: {fn}")
-    print(f"false positives for {label}: {fp}")
     # write the results to a file
     with open(f"../data/conll_metrics_{label}.txt", "w") as f:
         f.write(f"True positives: {tp}\n")
