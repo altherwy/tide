@@ -15,4 +15,8 @@ annotation_files_path = '../../output/conll/annotator'
 output_path = '../data/conll_predictions.jsonl'
 ea.extract_annotations_to_jsonl(annotation_files_path, output_path)
 # %% calculate tp
+import calculate_tp as ct
+gt_file_path = '../data/conll_ground_truth.jsonl'
+pred_file_path = '../data/conll_predictions.jsonl'
+tp = ct.calc_tp(gt_file_path, pred_file_path)
 # %%
