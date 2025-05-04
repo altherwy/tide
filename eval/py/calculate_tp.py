@@ -47,6 +47,7 @@ def calc_tp(gt_file_path, pred_file_path):
         log_file.writelines(log)
         log_file.write(f"Total true positives: {tp}\n")
         log_file.write("End of log.\n")
+    return tp
      
 
 # %%
@@ -54,4 +55,4 @@ if __name__ == "__main__":
     # Example usage
     gt_file_path = '../data/conll_ground_truth.jsonl'
     pred_file_path = '../data/conll_predictions.jsonl'
-    calc_tp(gt_file_path, pred_file_path)
+    tp = calc_tp(gt_file_path, pred_file_path)
