@@ -1,0 +1,2 @@
+Total true positives: 0
+End of log.
