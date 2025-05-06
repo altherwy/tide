@@ -1,0 +1,8 @@
+True positives: 87
+Total labels in ground truth: 249
+Total labels in prediction: 1140
+False negatives: 162
+False positives: 1053
+Precision: 0.0763
+Recall: 0.3494
+F1 Score: 0.1253

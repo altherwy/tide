@@ -1,0 +1,274 @@
+True positive found: [109, 122, 'DATE']
+GT label: [109, 122, 'DATE']
+file name: note_165.txt
+
+True positive found: [40, 49, 'DATE']
+GT label: [40, 49, 'DATE']
+file name: note_167.txt
+
+True positive found: [35, 41, 'DATE']
+GT label: [35, 41, 'DATE']
+file name: note_184.txt
+
+True positive found: [55, 67, 'DATE']
+GT label: [55, 67, 'DATE']
+file name: note_306.txt
+
+True positive found: [58, 70, 'DATE']
+GT label: [58, 70, 'DATE']
+file name: note_307.txt
+
+True positive found: [60, 72, 'DATE']
+GT label: [60, 72, 'DATE']
+file name: note_484.txt
+
+True positive found: [239, 250, 'DATE']
+GT label: [239, 250, 'DATE']
+file name: note_578.txt
+
+True positive found: [71, 78, 'DATE']
+GT label: [71, 78, 'DATE']
+file name: note_909.txt
+
+True positive found: [79, 90, 'DATE']
+GT label: [79, 90, 'DATE']
+file name: note_965.txt
+
+True positive found: [94, 105, 'DATE']
+GT label: [94, 105, 'DATE']
+file name: note_983.txt
+
+True positive found: [18, 29, 'DATE']
+GT label: [18, 29, 'DATE']
+file name: note_983.txt
+
+True positive found: [85, 99, 'DATE']
+GT label: [85, 99, 'DATE']
+file name: note_1087.txt
+
+True positive found: [136, 148, 'DATE']
+GT label: [136, 148, 'DATE']
+file name: note_1219.txt
+
+True positive found: [84, 96, 'DATE']
+GT label: [84, 96, 'DATE']
+file name: note_1298.txt
+
+True positive found: [3, 15, 'DATE']
+GT label: [3, 15, 'DATE']
+file name: note_1349.txt
+
+True positive found: [21, 32, 'DATE']
+GT label: [21, 32, 'DATE']
+file name: note_1418.txt
+
+True positive found: [29, 42, 'DATE']
+GT label: [29, 42, 'DATE']
+file name: note_1419.txt
+
+True positive found: [32, 43, 'DATE']
+GT label: [32, 43, 'DATE']
+file name: note_1437.txt
+
+True positive found: [33, 44, 'DATE']
+GT label: [33, 44, 'DATE']
+file name: note_1451.txt
+
+True positive found: [31, 44, 'DATE']
+GT label: [31, 44, 'DATE']
+file name: note_1465.txt
+
+True positive found: [31, 40, 'DATE']
+GT label: [31, 40, 'DATE']
+file name: note_1476.txt
+
+True positive found: [33, 46, 'DATE']
+GT label: [33, 46, 'DATE']
+file name: note_1500.txt
+
+True positive found: [31, 44, 'DATE']
+GT label: [31, 44, 'DATE']
+file name: note_1525.txt
+
+True positive found: [22, 33, 'DATE']
+GT label: [22, 33, 'DATE']
+file name: note_1534.txt
+
+True positive found: [31, 42, 'DATE']
+GT label: [31, 42, 'DATE']
+file name: note_1541.txt
+
+True positive found: [100, 111, 'DATE']
+GT label: [100, 111, 'DATE']
+file name: note_1566.txt
+
+True positive found: [33, 43, 'DATE']
+GT label: [33, 43, 'DATE']
+file name: note_1569.txt
+
+True positive found: [31, 42, 'DATE']
+GT label: [31, 42, 'DATE']
+file name: note_1585.txt
+
+True positive found: [29, 41, 'DATE']
+GT label: [29, 41, 'DATE']
+file name: note_1597.txt
+
+True positive found: [31, 40, 'DATE']
+GT label: [31, 40, 'DATE']
+file name: note_1651.txt
+
+True positive found: [36, 45, 'DATE']
+GT label: [36, 45, 'DATE']
+file name: note_1661.txt
+
+True positive found: [29, 38, 'DATE']
+GT label: [29, 38, 'DATE']
+file name: note_1670.txt
+
+True positive found: [30, 43, 'DATE']
+GT label: [30, 43, 'DATE']
+file name: note_1680.txt
+
+True positive found: [30, 43, 'DATE']
+GT label: [30, 43, 'DATE']
+file name: note_1683.txt
+
+True positive found: [31, 42, 'DATE']
+GT label: [31, 42, 'DATE']
+file name: note_1722.txt
+
+True positive found: [164, 175, 'DATE']
+GT label: [164, 175, 'DATE']
+file name: note_1723.txt
+
+True positive found: [31, 42, 'DATE']
+GT label: [31, 42, 'DATE']
+file name: note_1730.txt
+
+True positive found: [224, 235, 'DATE']
+GT label: [224, 235, 'DATE']
+file name: note_1731.txt
+
+True positive found: [39, 47, 'DATE']
+GT label: [39, 47, 'DATE']
+file name: note_1740.txt
+
+True positive found: [33, 46, 'DATE']
+GT label: [33, 46, 'DATE']
+file name: note_1748.txt
+
+True positive found: [31, 44, 'DATE']
+GT label: [31, 44, 'DATE']
+file name: note_1810.txt
+
+True positive found: [31, 42, 'DATE']
+GT label: [31, 42, 'DATE']
+file name: note_1825.txt
+
+True positive found: [29, 42, 'DATE']
+GT label: [29, 42, 'DATE']
+file name: note_1841.txt
+
+True positive found: [30, 42, 'DATE']
+GT label: [30, 42, 'DATE']
+file name: note_1861.txt
+
+True positive found: [31, 41, 'DATE']
+GT label: [31, 41, 'DATE']
+file name: note_1876.txt
+
+True positive found: [32, 40, 'DATE']
+GT label: [32, 40, 'DATE']
+file name: note_1889.txt
+
+True positive found: [45, 59, 'DATE']
+GT label: [45, 59, 'DATE']
+file name: note_2022.txt
+
+True positive found: [19, 30, 'DATE']
+GT label: [19, 30, 'DATE']
+file name: note_2731.txt
+
+True positive found: [177, 189, 'DATE']
+GT label: [177, 189, 'DATE']
+file name: note_2849.txt
+
+True positive found: [228, 240, 'DATE']
+GT label: [228, 240, 'DATE']
+file name: note_2860.txt
+
+True positive found: [47, 58, 'DATE']
+GT label: [47, 58, 'DATE']
+file name: note_3123.txt
+
+True positive found: [355, 366, 'DATE']
+GT label: [355, 366, 'DATE']
+file name: note_3124.txt
+
+True positive found: [193, 204, 'DATE']
+GT label: [193, 204, 'DATE']
+file name: note_3140.txt
+
+True positive found: [3, 13, 'DATE']
+GT label: [3, 13, 'DATE']
+file name: note_3724.txt
+
+True positive found: [3, 17, 'DATE']
+GT label: [3, 17, 'DATE']
+file name: note_4091.txt
+
+True positive found: [15, 24, 'DATE']
+GT label: [15, 24, 'DATE']
+file name: note_5698.txt
+
+True positive found: [3, 16, 'DATE']
+GT label: [3, 16, 'DATE']
+file name: note_6383.txt
+
+True positive found: [48, 61, 'DATE']
+GT label: [48, 61, 'DATE']
+file name: note_6398.txt
+
+True positive found: [57, 69, 'DATE']
+GT label: [57, 69, 'DATE']
+file name: note_6446.txt
+
+True positive found: [90, 99, 'DATE']
+GT label: [90, 99, 'DATE']
+file name: note_6530.txt
+
+True positive found: [68, 82, 'DATE']
+GT label: [68, 82, 'DATE']
+file name: note_6534.txt
+
+True positive found: [38, 52, 'DATE']
+GT label: [38, 52, 'DATE']
+file name: note_6537.txt
+
+True positive found: [109, 123, 'DATE']
+GT label: [109, 123, 'DATE']
+file name: note_6563.txt
+
+True positive found: [61, 74, 'DATE']
+GT label: [61, 74, 'DATE']
+file name: note_6568.txt
+
+True positive found: [3, 14, 'DATE']
+GT label: [3, 14, 'DATE']
+file name: note_6641.txt
+
+True positive found: [3, 14, 'DATE']
+GT label: [3, 14, 'DATE']
+file name: note_6649.txt
+
+True positive found: [45, 56, 'DATE']
+GT label: [45, 56, 'DATE']
+file name: note_6652.txt
+
+True positive found: [5, 16, 'DATE']
+GT label: [5, 16, 'DATE']
+file name: note_6659.txt
+
+Total true positives: 68
+End of log.

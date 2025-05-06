@@ -1,0 +1,350 @@
+True positive found: [63, 77, 'LOCATION']
+GT label: [63, 77, 'LOCATION']
+file name: note_139.txt
+
+True positive found: [49, 58, 'LOCATION']
+GT label: [49, 58, 'LOCATION']
+file name: note_219.txt
+
+True positive found: [42, 53, 'LOCATION']
+GT label: [42, 53, 'LOCATION']
+file name: note_345.txt
+
+True positive found: [103, 110, 'LOCATION']
+GT label: [103, 110, 'LOCATION']
+file name: note_606.txt
+
+True positive found: [174, 188, 'LOCATION']
+GT label: [174, 188, 'LOCATION']
+file name: note_728.txt
+
+True positive found: [98, 109, 'LOCATION']
+GT label: [98, 109, 'LOCATION']
+file name: note_728.txt
+
+True positive found: [155, 166, 'LOCATION']
+GT label: [155, 166, 'LOCATION']
+file name: note_741.txt
+
+True positive found: [182, 193, 'LOCATION']
+GT label: [182, 193, 'LOCATION']
+file name: note_760.txt
+
+True positive found: [51, 55, 'LOCATION']
+GT label: [51, 55, 'LOCATION']
+file name: note_781.txt
+
+True positive found: [41, 46, 'LOCATION']
+GT label: [41, 46, 'LOCATION']
+file name: note_781.txt
+
+True positive found: [33, 37, 'LOCATION']
+GT label: [33, 37, 'LOCATION']
+file name: note_783.txt
+
+True positive found: [23, 28, 'LOCATION']
+GT label: [23, 28, 'LOCATION']
+file name: note_783.txt
+
+True positive found: [220, 229, 'LOCATION']
+GT label: [220, 229, 'LOCATION']
+file name: note_1445.txt
+
+True positive found: [55, 59, 'LOCATION']
+GT label: [55, 59, 'LOCATION']
+file name: note_1479.txt
+
+True positive found: [47, 51, 'LOCATION']
+GT label: [47, 51, 'LOCATION']
+file name: note_1483.txt
+
+True positive found: [41, 52, 'LOCATION']
+GT label: [41, 52, 'LOCATION']
+file name: note_1489.txt
+
+True positive found: [112, 116, 'LOCATION']
+GT label: [112, 116, 'LOCATION']
+file name: note_1545.txt
+
+True positive found: [10, 23, 'LOCATION']
+GT label: [10, 23, 'LOCATION']
+file name: note_1556.txt
+
+True positive found: [177, 190, 'LOCATION']
+GT label: [177, 190, 'LOCATION']
+file name: note_1557.txt
+
+True positive found: [162, 174, 'LOCATION']
+GT label: [162, 174, 'LOCATION']
+file name: note_1612.txt
+
+True positive found: [185, 202, 'LOCATION']
+GT label: [185, 202, 'LOCATION']
+file name: note_1749.txt
+
+True positive found: [4, 15, 'LOCATION']
+GT label: [4, 15, 'LOCATION']
+file name: note_1753.txt
+
+True positive found: [103, 114, 'LOCATION']
+GT label: [103, 114, 'LOCATION']
+file name: note_1757.txt
+
+True positive found: [179, 190, 'LOCATION']
+GT label: [179, 190, 'LOCATION']
+file name: note_1758.txt
+
+True positive found: [124, 135, 'LOCATION']
+GT label: [124, 135, 'LOCATION']
+file name: note_1768.txt
+
+True positive found: [181, 192, 'LOCATION']
+GT label: [181, 192, 'LOCATION']
+file name: note_1770.txt
+
+True positive found: [116, 129, 'LOCATION']
+GT label: [116, 129, 'LOCATION']
+file name: note_1777.txt
+
+True positive found: [89, 103, 'LOCATION']
+GT label: [89, 103, 'LOCATION']
+file name: note_1777.txt
+
+True positive found: [45, 56, 'LOCATION']
+GT label: [45, 56, 'LOCATION']
+file name: note_1917.txt
+
+True positive found: [133, 139, 'LOCATION']
+GT label: [133, 139, 'LOCATION']
+file name: note_2053.txt
+
+True positive found: [14, 20, 'LOCATION']
+GT label: [14, 20, 'LOCATION']
+file name: note_2054.txt
+
+True positive found: [48, 52, 'LOCATION']
+GT label: [48, 52, 'LOCATION']
+file name: note_2115.txt
+
+True positive found: [22, 29, 'LOCATION']
+GT label: [22, 29, 'LOCATION']
+file name: note_2124.txt
+
+True positive found: [120, 127, 'LOCATION']
+GT label: [120, 127, 'LOCATION']
+file name: note_2152.txt
+
+True positive found: [17, 28, 'LOCATION']
+GT label: [17, 28, 'LOCATION']
+file name: note_2165.txt
+
+True positive found: [76, 86, 'LOCATION']
+GT label: [76, 86, 'LOCATION']
+file name: note_2438.txt
+
+True positive found: [65, 72, 'LOCATION']
+GT label: [65, 72, 'LOCATION']
+file name: note_2745.txt
+
+True positive found: [55, 62, 'LOCATION']
+GT label: [55, 62, 'LOCATION']
+file name: note_2758.txt
+
+True positive found: [54, 63, 'LOCATION']
+GT label: [54, 63, 'LOCATION']
+file name: note_2787.txt
+
+True positive found: [69, 73, 'LOCATION']
+GT label: [69, 73, 'LOCATION']
+file name: note_2792.txt
+
+True positive found: [42, 51, 'LOCATION']
+GT label: [42, 51, 'LOCATION']
+file name: note_2795.txt
+
+True positive found: [112, 119, 'LOCATION']
+GT label: [112, 119, 'LOCATION']
+file name: note_2860.txt
+
+True positive found: [90, 94, 'LOCATION']
+GT label: [90, 94, 'LOCATION']
+file name: note_2878.txt
+
+True positive found: [71, 75, 'LOCATION']
+GT label: [71, 75, 'LOCATION']
+file name: note_2879.txt
+
+True positive found: [28, 38, 'LOCATION']
+GT label: [28, 38, 'LOCATION']
+file name: note_2880.txt
+
+True positive found: [18, 28, 'LOCATION']
+GT label: [18, 28, 'LOCATION']
+file name: note_2908.txt
+
+True positive found: [85, 95, 'LOCATION']
+GT label: [85, 95, 'LOCATION']
+file name: note_2910.txt
+
+True positive found: [84, 91, 'LOCATION']
+GT label: [84, 91, 'LOCATION']
+file name: note_2942.txt
+
+True positive found: [4, 15, 'LOCATION']
+GT label: [4, 15, 'LOCATION']
+file name: note_3009.txt
+
+True positive found: [73, 82, 'LOCATION']
+GT label: [73, 82, 'LOCATION']
+file name: note_3760.txt
+
+True positive found: [282, 286, 'LOCATION']
+GT label: [282, 286, 'LOCATION']
+file name: note_4545.txt
+
+True positive found: [83, 87, 'LOCATION']
+GT label: [83, 87, 'LOCATION']
+file name: note_4557.txt
+
+True positive found: [3, 7, 'LOCATION']
+GT label: [3, 7, 'LOCATION']
+file name: note_4724.txt
+
+True positive found: [48, 52, 'LOCATION']
+GT label: [48, 52, 'LOCATION']
+file name: note_4747.txt
+
+True positive found: [183, 187, 'LOCATION']
+GT label: [183, 187, 'LOCATION']
+file name: note_5084.txt
+
+True positive found: [223, 235, 'LOCATION']
+GT label: [223, 235, 'LOCATION']
+file name: note_5084.txt
+
+True positive found: [60, 64, 'LOCATION']
+GT label: [60, 64, 'LOCATION']
+file name: note_5088.txt
+
+True positive found: [25, 40, 'LOCATION']
+GT label: [25, 40, 'LOCATION']
+file name: note_5573.txt
+
+True positive found: [51, 66, 'LOCATION']
+GT label: [51, 66, 'LOCATION']
+file name: note_6086.txt
+
+True positive found: [37, 48, 'LOCATION']
+GT label: [37, 48, 'LOCATION']
+file name: note_6086.txt
+
+True positive found: [73, 88, 'LOCATION']
+GT label: [73, 88, 'LOCATION']
+file name: note_6086.txt
+
+True positive found: [54, 69, 'LOCATION']
+GT label: [54, 69, 'LOCATION']
+file name: note_6087.txt
+
+True positive found: [112, 123, 'LOCATION']
+GT label: [112, 123, 'LOCATION']
+file name: note_6087.txt
+
+True positive found: [12, 27, 'LOCATION']
+GT label: [12, 27, 'LOCATION']
+file name: note_6088.txt
+
+True positive found: [19, 30, 'LOCATION']
+GT label: [19, 30, 'LOCATION']
+file name: note_6089.txt
+
+True positive found: [108, 123, 'LOCATION']
+GT label: [108, 123, 'LOCATION']
+file name: note_6090.txt
+
+True positive found: [64, 75, 'LOCATION']
+GT label: [64, 75, 'LOCATION']
+file name: note_6091.txt
+
+True positive found: [132, 146, 'LOCATION']
+GT label: [132, 146, 'LOCATION']
+file name: note_6199.txt
+
+True positive found: [143, 154, 'LOCATION']
+GT label: [143, 154, 'LOCATION']
+file name: note_6299.txt
+
+True positive found: [71, 82, 'LOCATION']
+GT label: [71, 82, 'LOCATION']
+file name: note_6380.txt
+
+True positive found: [108, 112, 'LOCATION']
+GT label: [108, 112, 'LOCATION']
+file name: note_6573.txt
+
+True positive found: [91, 103, 'LOCATION']
+GT label: [91, 103, 'LOCATION']
+file name: note_6622.txt
+
+True positive found: [47, 58, 'LOCATION']
+GT label: [47, 58, 'LOCATION']
+file name: note_6664.txt
+
+True positive found: [125, 137, 'LOCATION']
+GT label: [125, 137, 'LOCATION']
+file name: note_6677.txt
+
+True positive found: [46, 61, 'LOCATION']
+GT label: [46, 61, 'LOCATION']
+file name: note_6677.txt
+
+True positive found: [82, 96, 'LOCATION']
+GT label: [82, 96, 'LOCATION']
+file name: note_6689.txt
+
+True positive found: [39, 43, 'LOCATION']
+GT label: [39, 43, 'LOCATION']
+file name: note_6692.txt
+
+True positive found: [13, 26, 'LOCATION']
+GT label: [13, 26, 'LOCATION']
+file name: note_6703.txt
+
+True positive found: [55, 61, 'LOCATION']
+GT label: [55, 61, 'LOCATION']
+file name: note_6771.txt
+
+True positive found: [30, 38, 'LOCATION']
+GT label: [30, 38, 'LOCATION']
+file name: note_6774.txt
+
+True positive found: [354, 369, 'LOCATION']
+GT label: [354, 369, 'LOCATION']
+file name: note_6776.txt
+
+True positive found: [247, 253, 'LOCATION']
+GT label: [247, 253, 'LOCATION']
+file name: note_6776.txt
+
+True positive found: [111, 126, 'LOCATION']
+GT label: [111, 126, 'LOCATION']
+file name: note_6793.txt
+
+True positive found: [16, 21, 'LOCATION']
+GT label: [16, 21, 'LOCATION']
+file name: note_6806.txt
+
+True positive found: [18, 31, 'LOCATION']
+GT label: [18, 31, 'LOCATION']
+file name: note_6828.txt
+
+True positive found: [235, 239, 'LOCATION']
+GT label: [235, 239, 'LOCATION']
+file name: note_6841.txt
+
+True positive found: [210, 214, 'LOCATION']
+GT label: [210, 214, 'LOCATION']
+file name: note_6841.txt
+
+Total true positives: 87
+End of log.

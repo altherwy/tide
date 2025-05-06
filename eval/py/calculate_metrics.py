@@ -56,7 +56,7 @@ def calc_tp(gt_file_path, pred_file_path):
                     break
             
 # Write log to file
-    with open("../data/conll_tp_log.txt", "w") as log_file:
+    with open("../data/our_tp_log.txt", "w") as log_file:
         log_file.writelines(log)
         log_file.write(f"Total true positives: {tp}\n")
         log_file.write("End of log.\n")
@@ -92,8 +92,8 @@ def calculate_metrics(true_positives, false_positives, false_negatives):
 # %%
 if __name__ == "__main__":
     # Example usage
-    gt_file_path = '../data/conll_ground_truth.jsonl'
-    pred_file_path = '../data/conll_predictions.jsonl'
+    gt_file_path = '../data/our_ground_truth.jsonl'
+    pred_file_path = '../data/our_predictions.jsonl'
     tp = calc_tp(gt_file_path, pred_file_path)
     print(f"Total true positives: {tp}")
     gt_total_labels = get_total_labels(gt_file_path)
