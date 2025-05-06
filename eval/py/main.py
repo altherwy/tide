@@ -1,16 +1,16 @@
 #%%
 import convert_to_tide as ct
 import extract_annotations_to_jsonl as ea
-#%%
+#%% Step 1: Convert the original dataset to TIDE format
 original_dataset = '../data/our_dataset.csv'
 output_dataset = '../data/our_ground_truth.jsonl'
 ct.convert_to_tide_format(original_dataset, output_dataset)
-# %%
+# %% Step 2: Split the jsonl file into separate .txt files
 # export each line in the jsonl file to a separate .txt file
 import generate_input_txt as git
 output_dir = '../../sample_notes'
 git.split_jsonl_to_txt(output_dataset, output_dir)
-# %% Generate prediction file
+# %% Step 4: Run the annotator
 annotation_files_path = '../../output/our/annotator'
 output_path = '../data/our_predictions.jsonl'
 ea.extract_annotations_to_jsonl(annotation_files_path, output_path)

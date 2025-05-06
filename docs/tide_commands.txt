@@ -1,9 +1,4 @@
-java -jar /opt/deid/target/deid-3.0.36-SNAPSHOT-dataflow.jar --deidConfigFile=/workspaces/src/main/resources/ --deidConfigFile=./src/main/resources/deid_config_omop_genrep.yaml --annotatorConfigFile=./src/main/resources/annotator_config.yaml --inputType=text --phiFileName=/workspaces/phi/phi_person_data_example.csv --personFile=/workspaces/person_data/person.csv --inputResource=/workspaces/sample_notes --outputResource=/workspaces/output\
 java -jar /opt/deid/target/deid-3.0.36-SNAPSHOT-dataflow.jar --deidConfigFile=/workspaces/src/main/resources/deid_config_omop_genrep.yaml --annotatorConfigFile=/workspaces/src/main/resources/annotator_config.yaml --inputType=text --phiFileName=/workspaces/phi/phi_person_data_example.csv --personFile=/workspaces/person_data/person.csv --inputResource=/workspaces/sample_notes --outputResource=/workspaces/output\
 
-docker run -it -v /Users/youssefaltherwy/Documents/GitHub/tide:/workspaces tide-program:latest
-java -jar /workspaces/target/deid-3.0.36-SNAPSHOT-dataflow.jar --deidConfigFile=/workspaces/src/main/resources/deid_config_omop_genrep.yaml --annotatorConfigFile=/workspaces/src/main/resources/annotator_config.yaml --inputType=text --phiFileName=/workspaces/phi_person_data_example.csv --personFile=/workspaces/person.csv --inputResource=/workspaces/sample_notes --outputResource=/workspaces/output
-java -jar /opt/deid/target/deid-3.0.36-SNAPSHOT-dataflow.jar --deidConfigFile=/workspaces/src/main/resources/deid_config_omop_genrep.yaml --annotatorConfigFile=/workspaces/src/main/resources/annotator_config.yaml --inputType=text --phiFileName=/workspaces/phi/phi_person_data_example.csv --personFile=/workspaces/person_data/person.csv --inputResource=/workspaces/sample_notes --outputResource=/workspaces/output\
 
-docker run -it --rm -v /Users/youssefaltherwy/Documents/GitHub/tide:/workspaces tide-program:latest
 docker run -it --rm -v /Users/youssefaltherwy/Documents/GitHub/tide:/workspaces tide-program:latest
